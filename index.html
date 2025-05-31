@@ -50,11 +50,11 @@
   <div id="registro">
     <h2>Registro de Participante</h2>
     <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
-    <button onclick="iniciarCuestionario()">&iexcl;Comenzar!</button>
+    <button onClick="iniciarCuestionario()">&iexcl;Comenzar!</button>
   </div>
 
   <div id="cuestionario" style="display:none;">
-    <h2>Cuestionario de Multiplicaci&oacute;n de Monomios con Resoluci&oacute;n de Problemas</h2>
+    <h2>Cuestionario de Multiplicaci&oacute;n de Monomios </h2>
     <div id="temporizador">Tiempo restante: <span id="tiempo">300</span> segundos</div>
     <form id="formulario">
       <div>
@@ -88,7 +88,7 @@
         <label><input type="radio" name="q5" value="c"> x<sup>3</sup></label>
       </div>
     </form>
-    <button onclick="enviarRespuestas()">&iexcl;Enviar!</button>
+    <button onClick="enviarRespuestas()">&iexcl;Enviar!</button>
   </div>
 
   <div id="resultado" style="display:none;">
@@ -111,7 +111,7 @@
     function iniciarCuestionario() {
       const nombre = document.getElementById('nombre').value.trim();
       if (!nombre) {
-        alert('¡Por favor, ingresa tu nombre!');
+        alert('ï¿½Por favor, ingresa tu nombre!');
         return;
       }
       document.getElementById('registro').style.display = 'none';
@@ -152,7 +152,7 @@
           <td>${i}</td>
           <td>${valor}</td>
           <td>${correcta}</td>
-          <td>${esCorrecta ? '??' : '?'}</td>
+          <td>${esCorrecta ? 'correcta' : 'incorrecta'}</td>
         </tr>`;
         tabla.innerHTML += fila;
       }
